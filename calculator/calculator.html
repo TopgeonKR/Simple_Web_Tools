@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+        <div class="buttons">
+            <button onclick="clearDisplay()">AC</button> <!-- 전체 초기화 버튼 -->
+            <button onclick="appendToDisplay('Rad')">Rad</button> <!-- 라디안 모드 -->
+            <button onclick="appendToDisplay('Deg')">Deg</button> <!-- 도 모드 -->
+            <button onclick="appendToDisplay('x!')">x!</button> <!-- 팩토리얼 -->
+            <button onclick="appendToDisplay('(')">(</button> <!-- 괄호 여는 버튼 -->
+            <button onclick="appendToDisplay(')')">)</button> <!-- 괄호 닫는 버튼 -->
+            <button onclick="appendToDisplay('%')">%</button> <!-- 퍼센트 연산 -->
+            
+            <button onclick="appendToDisplay('Inv')">Inv</button> <!-- 역수 버튼 -->
+            <button onclick="appendToDisplay('sin')">sin</button> <!-- 사인 -->
+            <button onclick="appendToDisplay('ln')">ln</button> <!-- 자연 로그 -->
+            <button onclick="appendToDisplay('7')">7</button> <!-- 숫자 7 버튼 -->
+            <button onclick="appendToDisplay('8')">8</button> <!-- 숫자 8 버튼 -->
+            <button onclick="appendToDisplay('9')">9</button> <!-- 숫자 9 버튼 -->
+            <button onclick="appendToDisplay('/')">÷</button> <!-- 나누기 -->
+            
+            <button onclick="appendToDisplay('π')">π</button> <!-- 파이 값 -->
+            <button onclick="appendToDisplay('cos')">cos</button> <!-- 코사인 -->
+            <button onclick="appendToDisplay('log')">log</button> <!-- 로그 -->
+            <button onclick="appendToDisplay('4')">4</button> <!-- 숫자 4 버튼 -->
+            <button onclick="appendToDisplay('5')">5</button> <!-- 숫자 5 버튼 -->
+            <button onclick="appendToDisplay('6')">6</button> <!-- 숫자 6 버튼 -->
+            <button onclick="appendToDisplay('*')">×</button> <!-- 곱하기 -->
+            
+            <button onclick="appendToDisplay('e')">e</button> <!-- 자연상수 e -->
+            <button onclick="appendToDisplay('tan')">tan</button> <!-- 탄젠트 -->
+            <button onclick="appendToDisplay('√')">√</button> <!-- 제곱근 -->
+            <button onclick="appendToDisplay('1')">1</button> <!-- 숫자 1 버튼 -->
+            <button onclick="appendToDisplay('2')">2</button> <!-- 숫자 2 버튼 -->
+            <button onclick="appendToDisplay('3')">3</button> <!-- 숫자 3 버튼 -->
+            <button onclick="appendToDisplay('-')">−</button> <!-- 빼기 -->
+            
+            <button onclick="appendToDisplay('Ans')">Ans</button> <!-- 이전 답안 -->
+            <button onclick="appendToDisplay('EXP')">EXP</button> <!-- 지수 표현 -->
+            <button onclick="appendToDisplay('x^y')">xʸ</button> <!-- 거듭제곱 -->
+            <button onclick="appendToDisplay('0')">0</button> <!-- 숫자 0 버튼 -->
+            <button onclick="appendToDisplay('.')">.</button> <!-- 소수점 버튼 -->
+            <button onclick="calculateResult()" class="equal">=</button> <!-- 결과 계산 버튼 -->
+            <button onclick="appendToDisplay('+')">+</button> <!-- 더하기 -->
+        </div>
+    </div>
+    
+    <script src="calculator.js"></script>
+</body>
+</html>

@@ -11,7 +11,7 @@ body {
 
 /* Calculator container */
 .calculator {
-    width: 350px;
+    width: 600px;
     background: white;
     padding: 20px;
     border-radius: 15px;
@@ -21,7 +21,7 @@ body {
 
 /* Display screen */
 #display {
-    width: 100%;
+    width: 97%;
     height: 60px;
     font-size: 2rem;
     text-align: right;
@@ -35,7 +35,7 @@ body {
 /* Button styles */
 .buttons {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     gap: 10px;
 }
 
@@ -53,34 +53,77 @@ button:active {
     background: #c4d0e1;
 }
 
+/* Number buttons (gray) */
+.number {
+    background: #dfe6ee;
+}
+
+
+/* Function buttons (light blue) */
+.function {
+    background: #98a6c2;
+    color: white;
+}
+
+.function:active {
+    background: #7c8ba5;
+}
+
 /* Equal button style */
-button.equal {
+.equal {
     background: #4a67ff;
     color: white;
     font-weight: bold;
 }
 
-button.equal:active {
+.equal:active {
     background: #3a57d1;
 }
 
 /* AC button style */
-button:nth-child(1) {
+.ac {
     background: #ff6b6b;
     color: white;
     font-weight: bold;
 }
 
-button:nth-child(1):active {
+.ac:active {
     background: #e04a4a;
 }
 
-/* Operator button styles */
-button:nth-child(7n + 4), button:nth-child(7n + 7) {
-    background: #98a6c2;
-    color: white;
+/* Rad/Deg Toggle Style
+.rad-deg-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    position: relative;
 }
 
-button:nth-child(7n + 4):active, button:nth-child(7n + 7):active {
-    background: #7c8ba5;
+.rad-deg-container::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 80%;
+    background-color: #7c8ba5;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
+.rad-deg {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.rad-deg.active {
+    color: #4a67ff;
+}
+
+.rad-deg.inactive {
+    color: black;
+}
+ */
